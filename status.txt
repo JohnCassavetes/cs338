@@ -1,0 +1,4 @@
+Jeremy Gautama
+
+I'm planning to use Kali to boost my cybersecurity skills. Maybe learn more about penetration testing and so on.
+The status of my Kali installation is complete (using UTM).
