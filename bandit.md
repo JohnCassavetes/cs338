@@ -69,7 +69,7 @@ Summary: Viewing a dash file cannot be instantly done by doing `cat -`, but also
 
 ## LEVEL 2 -> LEVEL 3
 
-> THE PASSWORD is ``
+> THE PASSWORD is `MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx`
 
 1. Log into bandit2 in the terminal by:
     ```bash
@@ -77,3 +77,21 @@ Summary: Viewing a dash file cannot be instantly done by doing `cat -`, but also
     ```
 
 2. Enter the password: `263JGJPfgU6LtdEvgfWU1XP5yac29mFx`
+
+3. Enter `ls` to see what files are there:
+    ```bash
+    bandit2@bandit:~$ ls
+    spaces in this filename
+    ```
+
+4. To view files with spaces, use a backslash before the space `\ ` like so:
+    ```bash
+    bandit2@bandit:~$ cat spaces\ in\ this\ filename
+    MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+    ```
+    Which is the password we're looking for.
+
+Summary: To view files with spaces, use a backslash after the first word, then a space, and the next word, and so on `\ `.
+
+## LEVEL 3 -> LEVEL 4
+
