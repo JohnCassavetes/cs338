@@ -2,7 +2,7 @@
 
 ## LEVEL 0
 
-THE PASSWORD is `bandit0`
+> THE PASSWORD is `bandit0`
 
 1. Input the following commands on your terminal:
     ```bash
@@ -15,7 +15,7 @@ Summary: When you want to specify a port for ssh in the terminal, you can use `-
 
 ## LEVEL 0 -> LEVEL 1
 
-THE PASSWORD is `ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If`
+> THE PASSWORD is `ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If`
 
 1. Log into bandit0 with the steps from LEVEL 0.
 
@@ -43,7 +43,7 @@ Summary: `cat` enables you to see the file you choose.
 
 ## LEVEL 1 -> LEVEL 2
 
-THE PASSWORD is `263JGJPfgU6LtdEvgfWU1XP5yac29mFx`
+> THE PASSWORD is `263JGJPfgU6LtdEvgfWU1XP5yac29mFx`
 
 1. Log into bandit1 in the terminal by:
     ```bash
@@ -69,7 +69,7 @@ Summary: Viewing a dash file cannot be instantly done by doing `cat -`, but also
 
 ## LEVEL 2 -> LEVEL 3
 
-THE PASSWORD is ``
+> THE PASSWORD is ``
 
 1. Log into bandit2 in the terminal by:
     ```bash
