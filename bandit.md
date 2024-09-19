@@ -99,7 +99,7 @@ Summary: To view files with spaces, use a backslash after the first word, then a
 
 > THE PASSWORD is `2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ`
 
-1. Log into bandit2 in the terminal by:
+1. Log into bandit3 in the terminal by:
     ```bash
     ssh -p 2220 bandit3@bandit.labs.overthewire.org
     ```
@@ -135,7 +135,7 @@ Summary: If you `ls` in a directory, and you don't see anything, mabye there's a
 
 > THE PASSWORD is `4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw`
 
-1. Log into bandit2 in the terminal by:
+1. Log into bandit4 in the terminal by:
     ```bash
     ssh -p 2220 bandit4@bandit.labs.overthewire.org
     ```
@@ -174,7 +174,7 @@ Summary: You can instantly see all the files by `cat`ing them with an `*`.
 
 > THE PASSWORD is `HWasnPhtq9AVKe0dmk45nxy20cvUa6EG`
 
-1. Log into bandit2 in the terminal by:
+1. Log into bandit5 in the terminal by:
     ```bash
     ssh -p 2220 bandit5@bandit.labs.overthewire.org
     ```
@@ -214,13 +214,64 @@ Summary: You can use `find` to search up specific files that are on the director
 
 ## LEVEL 6 -> LEVEL 7
 
-> THE PASSWORD is ``
+> THE PASSWORD is `morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj`
 
-1. Log into bandit2 in the terminal by:
+1. Log into bandit6 in the terminal by:
     ```bash
     ssh -p 2220 bandit6@bandit.labs.overthewire.org
     ```
 
 2. Enter the password: `HWasnPhtq9AVKe0dmk45nxy20cvUa6EG`
 
-3. Follow the following steps: 1. `ls`, 2. `cd inhere
+3. To find the directory for the password, use this command: `find / -user bandit7 -group bandit6 2>/dev/null`. Thanks Jeff.
+    ```bash
+    bandit6@bandit:~$ find / -user bandit7 -group bandit6 2>/dev/null
+    /var/lib/dpkg/info/bandit7.password
+    ```
+4. Then do `cat /var/lib/dpkg/info/bandit7.password`:
+    ```bash
+    bandit6@bandit:~$ cat /var/lib/dpkg/info/bandit7.password
+    morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+    ```
+    Password found.
+
+Summary: You can also use `find` to get the directory for files that you don't really have permission to.
+
+## LEVEL 7 -> LEVEL 8
+
+> THE PASSWORD is `dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc`
+
+1. Log into bandit7 in the terminal by:
+    ```bash
+    ssh -p 2220 bandit7@bandit.labs.overthewire.org
+    ```
+
+2. Enter the password: `morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj`
+
+3. Type in `ls` to see what files/directories are there:
+    ```bash
+    bandit7@bandit:~$ ls 
+    data.txt
+    ```
+
+4. Find the word next to "millionth" by using `grep`. Enter the command `cat data.txt | grep millionth`.
+    ```bash
+    bandit7@bandit:~$ cat data.txt | grep millionth
+    millionth	dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+    ```
+Password found!
+
+Summary: Use `grep` to find something that's in the file itself.
+
+## LEVEL 8 -> LEVEL 9
+
+> THE PASSWORD is ``
+
+1. Log into bandit8 in the terminal by:
+    ```bash
+    ssh -p 2220 bandit8@bandit.labs.overthewire.org
+    ```
+
+2. Enter the password: `dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc`
+
+3. 
