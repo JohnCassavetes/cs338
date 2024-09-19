@@ -265,7 +265,7 @@ Summary: Use `grep` to find something that's in the file itself.
 
 ## LEVEL 8 -> LEVEL 9
 
-> THE PASSWORD is ``
+> THE PASSWORD is `4CKMh1JI91bUIZZPXDqGanal4xvAg0JM`
 
 1. Log into bandit8 in the terminal by:
     ```bash
@@ -274,4 +274,93 @@ Summary: Use `grep` to find something that's in the file itself.
 
 2. Enter the password: `dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc`
 
-3. 
+3. Type in `ls` to see what files/directories are there:
+    ```bash
+    bandit8@bandit:~$ ls 
+    data.txt
+    ```
+
+4. To get the only line of text that occurs only once, we have to use `sort` and `uniq`. Enter the following command: `sort data.txt | uniq -u`
+    ```bash
+    bandit8@bandit:~$ sort data.txt | uniq -u
+    4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+    ```
+Password found!
+
+Summary: `sort [thefile.txt] | uniq -u` helps with finding the non-repeating line.
+
+## LEVEL 9 -> LEVEL 10
+
+> THE PASSWORD is `xX9kMYMmlN4MgbpfMiqey`
+
+1. Log into bandit9 in the terminal by:
+    ```bash
+    ssh -p 2220 bandit9@bandit.labs.overthewire.org
+    ```
+
+2. Enter the password: `4CKMh1JI91bUIZZPXDqGanal4xvAg0JM`
+
+3. Type in the command: `strings data.txt | grep ==========`.
+
+    ```bash
+    bandit9@bandit:~$ strings data.txt | grep ==========
+    \a!;========== the
+    ========== passwordf
+    ========== isc
+    ========== FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+    ```
+    Password found!
+
+Summary: Use `strings` instead of `cat` to find human readable stuff with `grep`.
+
+## LEVEL 10 -> LEVEL 11
+
+> THE PASSWORD is `dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr`
+
+1. Log into bandit10 in the terminal by:
+    ```bash
+    ssh -p 2220 bandit10@bandit.labs.overthewire.org
+    ```
+
+2. Enter the password: `FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey`
+
+3. Do `cat data.txt`
+    ```bash
+    bandit10@bandit:~$ cat data.txt
+    VGhlIHBhc3N3b3JkIGlzIGR0UjE3M2ZaS2IwUlJzREZTR3NnMlJXbnBOVmozcVJyCg==
+    ```
+
+4. Use base64 to decode. Enter the command: `echo VGhlIHBhc3N3b3JkIGlzIGR0UjE3M2ZaS2IwUlJzREZTR3NnMlJXbnBOVmozcVJyCg== | base64 --decode`. Thank you [AskUbuntu](https://askubuntu.com/questions/178521/how-can-i-decode-a-base64-string-from-the-command-line).
+    ```bash
+    bandit10@bandit:~$ echo VGhlIHBhc3N3b3JkIGlzIGR0UjE3M2ZaS2IwUlJzREZTR3NnMlJXbnBOVmozcVJyCg== | base64 --decode
+    The password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+    ```
+    Password found!
+
+Summary: Use `base64` to decode the encoded string.
+
+## LEVEL 11 -> LEVEL 12
+
+> THE PASSWORD is `7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4`
+
+1. Log into bandit11 in the terminal by:
+    ```bash
+    ssh -p 2220 bandit11@bandit.labs.overthewire.org
+    ```
+
+2. Enter the password: `dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr`
+
+3. When you `cat data.txt`, it will show an encrypted Rot13 line.
+    ```bash
+    bandit11@bandit:~$ cat data.txt
+    Gur cnffjbeq vf 7k16JArUVv5LxVuJfsSVdbbtaHGlw9D4
+    ```
+
+4. To decode Rot13, use the command `cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'`
+    ```bash
+    bandit11@bandit:~$ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+    The password is 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+    ```
+    Password found!
+
+Summary: Use `tr` to translate characters / decrypt them if they're somewhat like a Ceasar Cipher.
