@@ -2,7 +2,7 @@ Jeremy Gautama
 
 #  Diffie-Hellman
 
-### Alice sent Bob the number 53.
+### Alice
 1. A = g^a % p
 2. A = 7^a % 97
 3. 53 = 7^a % 97
@@ -18,7 +18,7 @@ Jeremy Gautama
     > (7**22) % 97: 53\
     > a = 22
 
-### Bob sent Alice the number 82
+### Bob
 1. B = g^b % p
 2. B = 7^b % 97
 3. 82 = 7^b % 97
@@ -51,4 +51,6 @@ Show precisely where in your process you would have failed if the integers invol
 
 Explanation of why this wouldn't work with big integers: 
 > It would be too much and take a lot of computing power to generate the number, making it inefficient.
+
+#  RSA
 
