@@ -1,7 +1,14 @@
 Jeremy Gautama
 
-1. Alice and Bob use Diffie-Hellman to agree on a shared secret from which they derive an AES key K, then Alice encrypts the long message M with using AES with the shared key K, and sends it to Bob.
+1. 
+Alice and Bob use Diffie-Hellman to agree on a shared secret from which they derive an AES key K, 
+then Alice encrypts the long message M with using AES with the shared key K, and sends it to Bob.
 
-2. Alice does H(M) and encrypts it with her S_A key and sends it to Bob. if Bob's decryption of H(M) is the same as Alice's H(M), it has not been modified.
+2. 
+Alice does H(M) and encrypts it with her S_A key and sends it to Bob. 
+if Bob's decryption of H(M) is the same as Alice's H(M), it has not been modified.
 
-3. Alice and Bob use Diffie-Hellman to agree on a shared secret from which they derive an AES key K, then Alice encrypts the long message M with using AES with the shared key K, does H(M) and encrypts it with her S_A key and sends it to Bob. 
+3. 
+Alice and Bob use Diffie-Hellman to agree on a shared secret from which they derive an AES key K, 
+then Alice encrypts the long message M with using AES with the shared key K, 
+does H(M) and encrypts it with her S_A key and sends it to Bob. 
