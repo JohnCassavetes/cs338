@@ -1,0 +1,5 @@
+Jeremy Gautama
+
+1. Alice and Bob use Diffie-Hellman to agree on a shared secret from which they derive an AES key K.
+
+2. 
