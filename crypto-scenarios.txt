@@ -15,6 +15,9 @@ then Alice encrypts the long message M with using AES with the shared key K,
 does H(M) and encrypts it with her S_A key and sends it to Bob. 
 
 4.
+Claim 1: Someone intercepted the contract. Low possibility, because the hash would be different.
+Claim 2: Bob found Alice's secret key and made changes to the contract. Medium possibilty, needs more evidence if Bob has ever stolen or done some bad stuff. 
+Claim 3: Alice sent the wrong contract by accident. High possibility, human error.
 
 
 5. 
