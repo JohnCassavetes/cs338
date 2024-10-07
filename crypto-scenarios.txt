@@ -21,7 +21,7 @@ Claim 3: Alice sent the wrong contract by accident. High possibility, human erro
 
 
 5. 
-Sig_CA = E(S_CA, H(M)) where M is a random message. 
+Sig_CA = E(S_CA, H(M))
 
 6. 
 Bob provides M and Sig_B, so that M||Sig_B and Sig_B = E(S_B, H(M)). 
