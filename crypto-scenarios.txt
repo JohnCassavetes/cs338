@@ -1,4 +1,5 @@
 Jeremy Gautama
+Collaboratorated with John Win
 
 1. 
 Alice and Bob use Diffie-Hellman to agree on a shared secret from which they derive an AES key K, 
@@ -12,3 +13,17 @@ if Bob's decryption of H(M) is the same as Alice's H(M), it has not been modifie
 Alice and Bob use Diffie-Hellman to agree on a shared secret from which they derive an AES key K, 
 then Alice encrypts the long message M with using AES with the shared key K, 
 does H(M) and encrypts it with her S_A key and sends it to Bob. 
+
+4.
+
+
+5. 
+Sig_CA = E(S_CA, H(M)) where M is a random message. 
+
+6. 
+Bob provides M and Sig_B, so that M||Sig_B and Sig_B = E(S_B, H(M)). 
+Alice does H(M) uses P_B, E(P_B, Sig_B) so that she can validate Bob's legitimacy. 
+
+7. 
+a. Mal obtaining the CA's secret key, which allows her to create her own trusted certificates. 
+b. Mal obtains Bob's secret key and provides a signature that is legitimate but not actually from Bob.
