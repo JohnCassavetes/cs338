@@ -1,0 +1,19 @@
+Jeremy Gautama
+
+=== Part 1: Cookies ===
+
+a. Name: theme, Value: default
+b. Yes
+c. "Cookie: theme=default", 
+    "Set-Cookie: theme-red; Expires=Thu, 23 Jan 2025 01:57:36". 
+    Yes I see the same cookie values as I did with the inspector.
+d. Yes
+e. Using Cookies
+f. The browser sends an HTTP GET request, and gets a response with a Set-Cookie header to update the theme of the cookie.
+g. If you want red, change the url from http://cs338.jeffondich.com/fdf/ to http://cs338.jeffondich.com/fdf/?theme=red -- 
+    basically just add "?theme=[theme that you want]" at the end of the url.
+h. Intercept the request when you change the theme, then edit the 'Cookie: theme="[red or blue or default]"', then forward it.
+i. In Cookie Jar. To access it go to Settings > Sessions > Open cookie jar.
+
+=== Part 2: Cross-Site Scripting (XSS) ===
+
