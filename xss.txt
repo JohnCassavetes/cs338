@@ -1,7 +1,6 @@
 Jeremy Gautama
 
 === Part 1: Cookies ===
-
 a. Name: theme, Value: default
 b. Yes
 c. "Cookie: theme=default", 
@@ -10,10 +9,16 @@ c. "Cookie: theme=default",
 d. Yes
 e. Using Cookies
 f. The browser sends an HTTP GET request, and gets a response with a Set-Cookie header to update the theme of the cookie.
-g. If you want red, change the url from http://cs338.jeffondich.com/fdf/ to http://cs338.jeffondich.com/fdf/?theme=red -- 
+g. If you want red, change the url from http://cs338.jeffondich.com/fdf/ to http://cs338.jeffondich.com/fdf/?theme=red 
     basically just add "?theme=[theme that you want]" at the end of the url.
 h. Intercept the request when you change the theme, then edit the 'Cookie: theme="[red or blue or default]"', then forward it.
 i. In Cookie Jar. To access it go to Settings > Sessions > Open cookie jar.
 
 === Part 2: Cross-Site Scripting (XSS) ===
-
+a. Step-by-step description
+    1. User clicks on the post
+    2. It will send a GET request for the row I selected.
+    3. It will run a javascript command from the post.
+b. Redirecting user to a new window using window.location.href
+c. Having a script that can instantly download a file to the user's computer
+d. Using output encoding.
